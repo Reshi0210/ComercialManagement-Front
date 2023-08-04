@@ -13,7 +13,7 @@ export class DashBoardComponent implements OnInit {
  
  
   ngOnInit(): void {
-    throw new Error('Method not implemented.');
+    
   }
 
 

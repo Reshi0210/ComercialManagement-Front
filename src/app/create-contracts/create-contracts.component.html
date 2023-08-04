@@ -1,0 +1,80 @@
+<div clas="container-fluid">
+    <div class="position-static">
+      <div class="cont">
+        <h1>introduzca los datos del nuevo contrato</h1>
+        <br />
+        <form (ngSubmit)="onSubmit()" #myForm="ngForm">
+            
+            <div class="row">
+              <mat-form-field appearance="fill">
+                 <input matInput name="no"
+                 required
+                 type="text"
+                 [(ngModel)]="contract.number"
+                 placeholder="numero de contrato"
+                 />
+                 <mat-error>El campo es requerido</mat-error>
+                </mat-form-field>
+          </div>
+
+
+          <div class="row">
+            <mat-form-field appearance="fill">
+               <input matInput name="des"
+               required
+               type="text"
+               [(ngModel)]="contract.description"
+               placeholder="Descripcion"
+               />
+               <mat-error>El campo es requerido</mat-error>
+              </mat-form-field>
+        </div>
+
+
+          <div class="row">
+            <mat-form-field appearance="fill">
+               <input matInput name="client"
+               required
+               type="text"
+               [(ngModel)]="contract.client"
+               placeholder="Nombre del cliente"
+               />
+               <mat-error>El campo es requerido</mat-error>
+              </mat-form-field>
+        </div>
+
+    
+
+        <div class="row">
+            <mat-form-field appearance="fill">
+               <input matInput name="amount"
+               required
+               type="date"
+               [(ngModel)]="contract.creationDate"
+               placeholder="monto"
+               />
+               <mat-error>El campo es requerido</mat-error>
+              </mat-form-field>
+        </div>
+
+        <div class="row">
+            <mat-form-field appearance="fill">
+               <input matInput name="date"
+               required
+               type="date"
+               [(ngModel)]="contract.expirationDate"
+               placeholder="fecha"
+               />
+               <mat-error>El campo es requerido</mat-error>
+              </mat-form-field>
+        </div>
+
+   
+
+          <br />
+          <button [disabled]="!myForm.valid" type="submit" class="btn btn-success" (click)="save()">Crear</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  

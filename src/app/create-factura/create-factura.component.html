@@ -1,0 +1,77 @@
+
+<div clas="container-fluid">
+    <div class="position-static">
+      <div class="cont">
+        <h1>introduzca los datos de la nueva factura</h1>
+        <br />
+        <form (ngSubmit)="onSubmit()" #myForm="ngForm">
+            
+            <div class="row">
+              <mat-form-field appearance="fill">
+                 <input matInput name="code"
+                 required
+                 type="text"
+                 [(ngModel)]="factura.code"
+                 placeholder="código de la factura"
+                 />
+                 <mat-error>El campo es requerido</mat-error>
+                </mat-form-field>
+          </div>
+          
+
+
+          <div class="row">
+            <mat-form-field appearance="fill">
+               <input matInput name="no"
+               required
+               type="text"
+               [(ngModel)]="factura.facturaNumber"
+               placeholder="NO. de la factura"
+               />
+               <mat-error>El campo es requerido</mat-error>
+              </mat-form-field>
+        </div>
+
+        <div class="row">
+            <mat-form-field appearance="fill">
+               <input matInput name="client"
+               required
+               type="text"
+               [(ngModel)]="factura.client"
+               placeholder="cliente"
+               />
+               <mat-error>El campo es requerido</mat-error>
+              </mat-form-field>
+        </div>
+
+        <div class="row">
+            <mat-form-field appearance="fill">
+               <input matInput name="amount"
+               required
+               type="text"
+               [(ngModel)]="factura.amount"
+               placeholder="monto"
+               />
+               <mat-error>El campo es requerido</mat-error>
+              </mat-form-field>
+        </div>
+
+        <div class="row">
+            <mat-form-field appearance="fill">
+               <input matInput name="date"
+               required
+               type="date"
+               [(ngModel)]="factura.date"
+               placeholder="fecha"
+               />
+               <mat-error>El campo es requerido</mat-error>
+              </mat-form-field>
+        </div>
+
+          <br />
+          <button [disabled]="!myForm.valid" type="submit" class="btn btn-success" (click)="save()">Crear</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  

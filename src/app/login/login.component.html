@@ -1,0 +1,30 @@
+<div clas="container-fluid">
+    <div class="position-static">
+      <div class="position-absolute top-50 start-50 translate-middle">
+        <h1>Iniciar Sesión</h1>
+        <br />
+        <form (ngSubmit)="onSubmit()" #myForm="ngForm">
+          <div class="form-group">
+            <input
+              name="user"
+              class="form-control"
+              type="text"
+              [(ngModel)]="request.username"
+              placeholder="Usuario"
+            />
+            <br />
+            <input
+              name="pass"
+              class="form-control"
+              type="password"
+              [(ngModel)]="request.password"
+              placeholder="Contraseña"
+            />
+          </div>
+          <br />
+          <button type="submit" class="btn btn-success">Acceder</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  
